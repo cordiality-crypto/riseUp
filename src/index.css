@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animated-background {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+.animated-background span {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.1), 0 0 0 8px rgba(255,255,255,0.1), 0 0 20px rgba(255,255,255,0.1);
+    animation: animate 10s linear infinite;
+}
+
+.animated-background span::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+.animated-background span:nth-child(1) { top: 0; right: 0; animation-delay: 0s; animation-duration: 10s; }
+.animated-background span:nth-child(2) { top: 0; right: 80px; animation-delay: 2s; animation-duration: 12s; }
+.animated-background span:nth-child(3) { top: 80px; right: 0; animation-delay: 4s; animation-duration: 14s; }
+.animated-background span:nth-child(4) { top: 0; right: 180px; animation-delay: 6s; animation-duration: 16s; }
+.animated-background span:nth-child(5) { top: 0; right: 400px; animation-delay: 8s; animation-duration: 18s; }
+.animated-background span:nth-child(6) { top: 0; right: 600px; animation-delay: 10s; animation-duration: 20s; }
+.animated-background span:nth-child(7) { top: 300px; right: 0; animation-delay: 12s; animation-duration: 22s; }
+.animated-background span:nth-child(8) { top: 0; right: 700px; animation-delay: 14s; animation-duration: 24s; }
+.animated-background span:nth-child(9) { top: 0; right: 1000px; animation-delay: 16s; animation-duration: 26s; }
+.animated-background span:nth-child(10) { top: 0; right: 450px; animation-delay: 18s; animation-duration: 28s; }
+.animated-background span:nth-child(11) { top: 0; right: 400px; animation-delay: 8s; animation-duration: 18s; }
+.animated-background span:nth-child(12) { top: 0; right: 600px; animation-delay: 10s; animation-duration: 20s; }
+.animated-background span:nth-child(13) { top: 300px; right: 0; animation-delay: 12s; animation-duration: 22s; }
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
