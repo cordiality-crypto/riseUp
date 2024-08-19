@@ -46,14 +46,14 @@ export default function App() {
             <img src={Dropdown} alt="Menu" className=''/>
           </button>
           {isDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-48 backdrop-blur-lg text-white shadow-lg rounded-md">
+            <div className="absolute right-0 mt-2 w-48 bg-white/10 backdrop-blur-sm text-white shadow-lg rounded-md">
               <div className="flex flex-col space-y-2 p-4">
-                <a  onClick={handleScroll} className='cursor-pointer' href='#title'>Home</a>
-                <a  onClick={handleScroll} className='cursor-pointer' href='#about'>About</a>
-                <a  onClick={handleScroll} className='cursor-pointer' href='#services'>Services</a>
-                <a  onClick={handleScroll} className='cursor-pointer' href='#internship'>Internship</a>
-                <a  onClick={handleScroll} className='cursor-pointer' href='#team'>Team</a>
-                <a  onClick={handleScroll} className='cursor-pointer' href='#contact'>Contact Us</a>
+                <a onClick={handleScroll} className='cursor-pointer' href='#title'>Home</a>
+                <a onClick={handleScroll} className='cursor-pointer' href='#about'>About</a>
+                <a onClick={handleScroll} className='cursor-pointer' href='#services'>Services</a>
+                <a onClick={handleScroll} className='cursor-pointer' href='#internship'>Internship</a>
+                <a onClick={handleScroll} className='cursor-pointer' href='#team'>Team</a>
+                <a onClick={handleScroll} className='cursor-pointer' href='#contact'>Contact Us</a>
               </div>
             </div>
           )}
